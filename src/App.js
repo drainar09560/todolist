@@ -1,6 +1,7 @@
 import React from 'react';
 import PostList from "./components/PostList";
 import PostForm from "./components/PostForm";
+import ph1 from './assets/ph1.jpg';
 
 function App() {
     const [posts, setPosts]  = React.useState([
@@ -20,7 +21,12 @@ function App() {
   return (
     <div className="App" >
         <PostForm create={createPost} />
-        <PostList remove={removePost} posts={posts} title='Первый список'/>
+        {posts.length !== 0
+            ?
+            <PostList remove={removePost} posts={posts} title='Первый список'/>
+            :
+            <h1 style={{textAlign: 'center', fontSize: '32px', color: 'teal', marginTop: '60px'}}>Посты не найдены</h1>
+        }
     </div>
   );
 }

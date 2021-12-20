@@ -14,3 +14,4 @@ const PostList = ({posts, title, remove}) => {
 };
 
 export default PostList;
+

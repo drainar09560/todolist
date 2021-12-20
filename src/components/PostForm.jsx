@@ -17,10 +17,10 @@ const PostForm = ({create}) => {
                 create(newPost)
                 setPost({title:'', body:''})
             } else {
-                alert(new Error('description is empty'))
+                // alert(new Error('description is empty'))
             }
         } else {
-            alert(new Error('title is empty'))
+            // alert(new Error('title is empty'))
         }
 
         // const newPost = {
